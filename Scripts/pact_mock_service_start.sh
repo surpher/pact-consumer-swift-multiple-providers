@@ -3,10 +3,10 @@
 # Kill any running pact-mock-services from previously failed builds
 sh ./Scripts/pact_mock_service_stop.sh
 
-# Remove any existing .json files from /pacts contract from differently named Consumer/Provider combinations
+# Remove any existing .json files from /pacts folder
 rm -fr ${PROJECT_DIR}/PACT/pacts/*.json
 
-# Prepare folders for PACT output
+# Optionally prepare folders for PACT output (when running for first time or if you clean up the lot)
 mkdir -p ${PROJECT_DIR}/PACT/pacts
 
 #
